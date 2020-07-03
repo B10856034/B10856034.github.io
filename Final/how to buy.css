@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #FDEDEC;
+    line-height: 1;
+}
+
+.header {
+    height: 50px;
+    background-color: #F5B7B1;
+    color: #626567;
+    position: relative;
+    font-family: Comic Sans MS;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    background-color: #FBEEE6;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.btn span {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 2px;
+    width: 36px;
+    background-color: #626567;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 8px 0px #F5B7B1, 0px -8px 0px #F5B7B1;
+}
+
+nav {
+    width: 15%;
+    height: 100vh;
+    background-color: #FADBD8;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    font-family: 微軟正黑體;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #566573;
+    padding: 5px 10px;
+    border-bottom: 1px solid lightcoral;
+}
+
+a:hover {
+    background-color: #FEF5E7;
+}
+
+#menu {
+    position: absolute;
+}
+
+#menu:checked~.header nav {
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        display: none;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav {
+        position: relative;
+        left: 0;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: 0;
+        background-color: transparent;
+    }
+    nav a {
+        border-bottom: none;
+        color: rgb(144, 21, 41);
+    }
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.footer {
+    overflow: hidden;
+    position: relative;
+    padding: 38px 0 46px;
+    text-align: center;
+    background-color: #eeded1;
+    letter-spacing: .1em;
+    font-weight: bold;
+    font-family: monospace, Helvetica, "微軟正黑體", sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer,
+.footer a {
+    color: #000;
+}
+
+.footer__slogan {
+    color: #000;
+    font-size: 48px;
+    line-height: 1em;
+}
+
+.footer__slogan span {
+    display: block;
+    margin-top: 15px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: .125em;
+}
+
+.footer__menu .translate_tw,
+.footer__menu .translate_en {
+    display: block;
+    line-height: 21px;
+    font-size: 12px;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+.footer__menu .translate_tw,
+{
+    opacity: 0;
+}
+
+.footer__menu .translate_en,
+{
+    opacity: 1;
+    margin-top: -21px;
+}
+
+.footer__menu a,
+{
+    display: inline-block;
+}
+
+.footer__menu a:hover .translate_tw,
+{
+    opacity: 1;
+}
+
+.footer__menu a:hover .translate_en,
+{
+    opacity: 0;
+}
+
+.footer__menu {
+    margin-top: 19px;
+}
+
+.footer__menu ul {
+    display: inline-block;
+}
+
+.footer__menu ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.footer__menu li {
+    display: block;
+    float: left;
+    line-height: 21px;
+    width: 134px;
+}
+
+.footer__menu a {
+    display: block;
+    position: relative;
+    padding-top: 47px;
+    color: #000;
+    margin: 0 10px;
+}
+
+.footer__contact {
+    margin-top: 11px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.footer__phone {
+    line-height: 30px;
+}
+
+.footer__email,
+.footer__BH {
+    font-size: 12px;
+}
+
+.footer__email {
+    margin-top: 7px;
+}
+
+.footer__BH {
+    letter-spacing: .11em;
+}
+
+.footer__BH span {
+    font-size: 90%;
+}
+
+.footer__copyright {
+    position: absolute;
+    right: 71px;
+    bottom: 57px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        overflow: hidden;
+        position: relative;
+        padding: 38px 0 16px;
+    }
+    .footer__contact {
+        margin-top: 46px;
+        font-size: 20px;
+        text-align: left;
+        float: left;
+        margin-left: calc(50% - 375px);
+        margin-bottom: 110px;
+    }
+    .footer__email,
+    .footer__BH {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer__menu .translate_tw {
+        opacity: 1;
+    }
+    .footer__menu .translate_en {
+        opacity: 0;
+    }
+    .footer {
+        padding-top: 46px;
+        padding-bottom: 44px;
+    }
+    .footer__slogan,
+    .footer__slogan span {
+        font-size: 25px;
+        line-height: 34px;
+    }
+    .footer__slogan span {
+        margin-top: 0;
+        letter-spacing: .05em;
+    }
+    .footer__menu {
+        width: 300px;
+        margin: 20px auto;
+    }
+    .footer__menu li {
+        width: 100px;
+    }
+    .footer__menu a {
+        margin: 0;
+    }
+    .footer__phone {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .footer__email,
+    .footer__BH {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer__email {
+        margin-top: 0;
+    }
+    .footer__copyright {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 20px;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+.wrap {
+    position: relative;
+    min-height: 100vh;
+    width: 1384px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 116px 12px 32px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding-bottom: 0px;
+    }
+    body .wrap {
+        padding-top: 101px;
+        text-align: center;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.corp-content-hd {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    font-size: 0.937em;
+    font-weight: bold;
+}
+
+.corp-content-hd h1 {
+    font-weight: bold;
+    font-family: 微軟正黑體;
+}
+
+.corp-content-hd p {
+    margin: 10px 0 0;
+    font-size: 0.866em;
+    font-weight: normal;
+    line-height: 1.6em;
+}
+
+.corp-content-bd {
+    padding-bottom: 30px;
+    font-size: 0.81em;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    max-width: 700px;
+}
+
+@media (max-width: 767px) {
+    .corp-content-bd .accordion {
+        display: none;
+        opacity: 0;
+    }
+    .corp-content-bd .accordion {
+        display: block;
+        transition: opacity .2s ease-in;
+        opacity: 1;
+    }
+}
